@@ -7,6 +7,11 @@
 #error " MODE not defined "
 #endif
 
+int add(int n1, int n2)
+{
+	return n1 + n2;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Russian");
@@ -20,9 +25,9 @@ int main()
 	std::cout << "Введите число 2: ";
 	int val2 = 0;
 	std::cin >> val2;
-	std::cout << "Результат сложения: " << val1 + val2 << std::endl;
+	std::cout << "Результат сложения: " << add(val1, val2) << std::endl;
 #else
-#error " Неизвестный режим. Завершение работы "
+	std::cout << " Неизвестный режим. Завершение работы " << std::endl;
 #endif  
 
 
